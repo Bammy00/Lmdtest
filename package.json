@@ -1,0 +1,22 @@
+{
+  "name": "lmdtest",
+  "version": "1.0.0",
+  "description": "QA Task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bammy00/Lmdtest.git"
+  },
+  "author": "Eleyinmi Ayobami",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bammy00/Lmdtest/issues"
+  },
+  "homepage": "https://github.com/Bammy00/Lmdtest#readme",
+  "devDependencies": {
+    "cypress": "^12.17.4"
+  }
+}
