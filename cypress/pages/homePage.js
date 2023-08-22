@@ -1,12 +1,11 @@
 class HomePage {
-    visit() {
-      cy.visit("/");
-    }
-  
-    searchForProduct(productName) {
-      cy.get(".search-input").first().type(productName).type("{enter}");
-    }
+  visit() {
+    cy.visit("/");
   }
-  
-  export default new HomePage();
-  
+
+  searchForProduct(productName) {
+    cy.get(".search-input").first().type(productName).type("{enter}");
+  }
+}
+
+export default new HomePage();

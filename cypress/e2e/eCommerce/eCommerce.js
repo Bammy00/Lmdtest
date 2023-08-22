@@ -21,7 +21,9 @@ When("I click on the first product", () => {
 
 When("I add the product to the cart", () => {
   ProductPage.addToCart();
-  ProductPage.assertCartAlertText("Success: You have added iPhone to your shopping cart!");
+  ProductPage.assertCartAlertText(
+    "Success: You have added iPhone to your shopping cart!"
+  );
 });
 
 When("I proceed to checkout", () => {
@@ -29,7 +31,21 @@ When("I proceed to checkout", () => {
 });
 
 When("I fill in my details", () => {
-  CheckoutPage.fillInDetails("John", "Doe", yopmailEmail, "012452728", "Cityville", "Cityville", "Zone", "White House Lane", "White House Lane", "Lagos", "23401", "Nigeria", "Lagos");
+  CheckoutPage.fillInDetails(
+    "Ayo",
+    "Bami",
+    yopmailEmail,
+    "012452728",
+    "Password123",
+    "Password123",
+    "Zone",
+    "White House Lane",
+    "White House Lane",
+    "Lagos",
+    "23401",
+    "Nigeria",
+    "Lagos"
+  );
 });
 
 When("I uncheck the store newsletter option", () => {
@@ -41,6 +57,11 @@ When("I complete the checkout process", () => {
 });
 
 Then("I should see a successful checkout message", () => {
-  cy.url().should('eq', 'https://ecommerce-playground.lambdatest.io/index.php?route=checkout/success');
-  cy.get('#content').should("be.visible").and("contain", "Your order has been placed!");
+  cy.url().should(
+    "eq",
+    "https://ecommerce-playground.lambdatest.io/index.php?route=checkout/success"
+  );
+  cy.get("#content")
+    .should("be.visible")
+    .and("contain", "Your order has been placed!");
 });
