@@ -1,5 +1,5 @@
 {
-  "name": "parabank-cypress",
+  "name": "appzone-cypress",
   "version": "1.0.0",
   "description": "Cypress with Cucumber",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "paraBank-Cypress"
+    "url": "Lambdatest-Cypress"
   },
   "keywords": [
     "Cypress",
     "BDD",
     "Cucumber"
   ],
-  "author": "marijoy apa",
+  "author": "Eleyinmi Ayo",
   "license": "ISC",
   "dependencies": {
     "cypress": "^12.17.4",
