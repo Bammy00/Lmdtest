@@ -1,25 +1,30 @@
 {
-  "name": "lmdtest",
+  "name": "parabank-cypress",
   "version": "1.0.0",
-  "description": "QA Task",
+  "description": "Cypress with Cucumber",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bammy00/Lmdtest.git"
+    "url": "paraBank-Cypress"
   },
-  "author": "Eleyinmi Ayobami",
+  "keywords": [
+    "Cypress",
+    "BDD",
+    "Cucumber"
+  ],
+  "author": "marijoy apa",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Bammy00/Lmdtest/issues"
-  },
-  "homepage": "https://github.com/Bammy00/Lmdtest#readme",
-  "devDependencies": {
-    "cypress": "^12.17.4"
-  },
   "dependencies": {
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress": "^12.17.4",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-xpath": "^2.0.1",
+    "prettier": "^3.0.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "step_definitions": "cypress/e2e/eCommerce"
   }
 }
