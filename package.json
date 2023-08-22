@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Bammy00/Lmdtest#readme",
   "devDependencies": {
     "cypress": "^12.17.4"
+  },
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1"
   }
 }
