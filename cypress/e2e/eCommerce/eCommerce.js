@@ -3,9 +3,13 @@ import HomePage from "../../pages/homePage";
 import ProductPage from "../../pages/productPage";
 import CheckoutPage from "../../pages/checkoutPage";
 
-// Generate a random yopmail email addresses
+
+
+// Generate random yopmail email addresses
 const randomEmailPrefix = Math.random().toString(36).substring(7);
 const yopmailEmail = `${randomEmailPrefix}@yopmail.com`;
+
+
 
 Given("I am on the e-commerce site", () => {
   HomePage.visit();
