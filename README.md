@@ -1,6 +1,6 @@
 # Cypress eCommerce and API Testing Project
 
-This project demonstrates the usage of [Cypress] for end-to-end testing of an e-commerce website and API testing using [JSONPlaceholder](https://jsonplaceholder.typicode.com/). It includes both UI and API test suites.
+This project demonstrates the usage of [Cypress] + Cucumber for end-to-end testing of an e-commerce website and API testing using [JSONPlaceholder](https://jsonplaceholder.typicode.com/). It includes both UI and API test suites.
 
 ## Table of Contents
 
