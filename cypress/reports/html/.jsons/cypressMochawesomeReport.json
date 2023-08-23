@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-23T11:04:50.352Z",
+    "end": "2023-08-23T11:04:51.257Z",
+    "duration": 905,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d3fa8752-47e1-4e18-902d-08257621f475",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api.cy.js",
+      "file": "cypress\\e2e\\api.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b534f5f1-217f-41cd-9b8f-f1156a20fef1",
+          "title": "Question 2 - JSONPlaceholder",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fetches all users and then prints a random user's name, email, and address",
+              "fullTitle": "Question 2 - JSONPlaceholder Fetches all users and then prints a random user's name, email, and address",
+              "timedOut": null,
+              "duration": 535,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Send a GET request to fetch all users from the API\ncy.request(\"https://jsonplaceholder.typicode.com/users\").then(function (response) {\n  expect(response.status).to.eq(200); // Assert that the response status is 200 (OK)\n  var users = response.body; // Store the array of users from response\n  var randomUserIndex = Math.floor(Math.random() * users.length);\n  var randomUser = users[randomUserIndex]; // Get the random user based on the index\n  userId = randomUser.id; // Store the random user's ID\n  // Print user's name, email, and address to log\n  cy.log(\"Random User's Name: \".concat(randomUser.name));\n  cy.log(\"Random User's Email: \".concat(randomUser.email));\n  cy.log(\"Random User's Address: \".concat(randomUser.address.street, \", \").concat(randomUser.address.city, \", \").concat(randomUser.address.zipcode));\n});",
+              "err": {},
+              "uuid": "aa6d0605-314a-465d-9210-ee42b6731994",
+              "parentUUID": "b534f5f1-217f-41cd-9b8f-f1156a20fef1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fetches the posts associated with the random user",
+              "fullTitle": "Question 2 - JSONPlaceholder Fetches the posts associated with the random user",
+              "timedOut": null,
+              "duration": 353,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Check if the userId is available from the first test\nif (!userId) {\n  cy.log(\"Random user ID not available. Please run the first test to fetch a user.\");\n  return; // Exit the test if userId is not available\n}\n// Send a GET request to fetch posts associated with the random user's ID\ncy.request(\"https://jsonplaceholder.typicode.com/posts?userId=\".concat(userId)).then(function (response) {\n  expect(response.status).to.eq(200); // Assert that the response status is 200 (OK)\n  var posts = response.body; // Store the array of posts from the response\n  // Log the posts associated with the random user\n  cy.log(\"Posts associated with User ID \".concat(userId, \":\"));\n  posts.forEach(function (post) {\n    cy.log(\"Title: \".concat(post.title));\n    cy.log(\"Body: \".concat(post.body));\n    cy.log(\"------\");\n  });\n});",
+              "err": {},
+              "uuid": "a99fbc0f-d8b5-49b0-abc4-507bd8015198",
+              "parentUUID": "b534f5f1-217f-41cd-9b8f-f1156a20fef1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aa6d0605-314a-465d-9210-ee42b6731994",
+            "a99fbc0f-d8b5-49b0-abc4-507bd8015198"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 888,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "cypressMochawesomeReport",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "cypressMochawesomeReport",
+        "videoOnFailOnly": "true",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
