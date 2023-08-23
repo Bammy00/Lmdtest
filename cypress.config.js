@@ -9,7 +9,7 @@ module.exports = defineConfig({
       
     },
     baseUrl: 'https://ecommerce-playground.lambdatest.io/',
-    specPattern: "cypress/e2e/*.feature",
+    specPattern: "cypress/e2e/*.{feature,js}",
     viewportHeight:1080,
     viewportWidth:1920
 
